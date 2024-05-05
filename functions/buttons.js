@@ -11,11 +11,11 @@ function createButtons() {
     for (let i = 0; i < length; i++) {
         // Create a new div element
         const button = document.createElement("button");
-        button.className = "search_button"
+        button.className = "search"
         // Set attributes or styles for the div if needed
         button.textContent = `${txts[i]} near me`;
         button.classList.add("created-div"); // Add a CSS class if needed
-        link.href = "../css/search.css";
+        link.href = "css/search.css";
 
         // Append the div to the container
         container.appendChild(button);
