@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hospital Map</title>
+<title>Nearby Hospitals</title>
 <style>
   #map {
     height: 400px;
@@ -13,23 +13,34 @@
 </head>
 <body>
 
-<h1>Hospital Map</h1>
+<h1>Nearby Hospitals</h1>
 
 <div id="map"></div>
 
 <script>
   function initMap() {
-    // 创建地图对象，并设置中心位置和缩放级别
+    var geocoder = new google.maps.Geocoder();
     var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE}, // 替换 YOUR_LATITUDE 和 YOUR_LONGITUDE 为医院位置的纬度和经度
-      zoom: 15 // 缩放级别
+      center: {lat: 40.7128, lng: -74.0060}, // 默认位置为纽约市
+      zoom: 10
     });
 
-    // 创建一个医院标记
-    var hospitalMarker = new google.maps.Marker({
-      position: {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE}, // 替换 YOUR_LATITUDE 和 YOUR_LONGITUDE 为医院位置的纬度和经度
-      map: map,
-      title: 'Hospital' // 标记的标题
+    var zipCode = "YOUR_ZIP_CODE"; // 替换为要搜索的 ZIP Code
+
+    // 地理编码，将 ZIP Code 转换为经纬度
+    geocoder.geocode({'address': zipCode}, function(results, status) {
+      if (status === 'OK') {
+        map.setCenter(results[0].geometry.location);
+
+        // 在地图上显示医院标记
+        var hospitalMarker = new google.maps.Marker({
+          position: results[0].geometry.location,
+          map: map,
+          title: 'Hospital'
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
     });
   }
 </script>
