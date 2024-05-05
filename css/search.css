@@ -11,7 +11,7 @@
 #zipCodeInput,.search_box 
 {
       border: 1px solid #ccc;
-      width: 500px;
+      width: 400px;
       border-right: none;
       line-height: 2em;
 }
@@ -27,7 +27,7 @@
       text-align: center;
 }
 
-.search_button:hover
+#search:hover
 {
       background:#E41B23;
 }
