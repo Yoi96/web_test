@@ -5,10 +5,9 @@
       justify-content: center;
       margin-top:4em;
       line-height: 2em;
-
 }
     
-.zipCodeInput
+#zipCodeInput
 {
       border: 1px solid #ccc;
       width: 400px;
