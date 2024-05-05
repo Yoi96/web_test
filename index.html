@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Map</title>
+<style>
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<h1>Hospital Map</h1>
+
+<div id="map"></div>
+
+<script>
+  function initMap() {
+    // 创建地图对象，并设置中心位置和缩放级别
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE}, // 替换 YOUR_LATITUDE 和 YOUR_LONGITUDE 为医院位置的纬度和经度
+      zoom: 15 // 缩放级别
+    });
+
+    // 创建一个医院标记
+    var hospitalMarker = new google.maps.Marker({
+      position: {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE}, // 替换 YOUR_LATITUDE 和 YOUR_LONGITUDE 为医院位置的纬度和经度
+      map: map,
+      title: 'Hospital' // 标记的标题
+    });
+  }
+</script>
+
+<!-- 引入 Google Maps JavaScript API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+<!-- 替换 YOUR_API_KEY 为你的 Google Maps API 密钥 -->
+
+</body>
+</html>
