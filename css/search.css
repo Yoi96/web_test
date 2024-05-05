@@ -4,13 +4,14 @@
       display: flex;
       justify-content: center;
       margin-top:4em;
-      height: auto;
+      line-height: 2em;
+
 }
     
 .search_box 
 {
       border: 1px solid #ccc;
-      width:200px;
+      width: 400px;
       border-right: none;
       line-height: 2em;
 }
@@ -24,7 +25,6 @@
       cursor: pointer;
       line-height: 2em;
       text-align: center;
-      margin-right: 3em;
 }
 
 .search_button:hover
@@ -32,14 +32,10 @@
       background:#E41B23;
 }
 
-
-#map 
+#mao
 {
-    height:auto;
-    width: 100%;
-    margin-top: 3em;
-    line-height: 30em;
-    border: none;
+      width: 100%;
+      height: auto;
+      line-height: 40em;
+
 }
-  
- 
