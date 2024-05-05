@@ -13,6 +13,7 @@
       width: 400px;
       border-right: none;
       line-height: 2em;
+      height: 2em;
 }
     
 #search
@@ -24,6 +25,7 @@
       cursor: pointer;
       line-height: 2em;
       text-align: center;
+      height: 2em;
 }
 
 #search:hover
