@@ -4,6 +4,7 @@
       display: flex;
       justify-content: center;
       margin-top:4em;
+      height: auto;
       line-height: 2em;
 
 }
@@ -11,7 +12,7 @@
 .search_box 
 {
       border: 1px solid #ccc;
-      width: 600px;
+      width:200px;
       border-right: none;
       line-height: 2em;
 }
@@ -31,3 +32,15 @@
 {
       background:#E41B23;
 }
+
+
+#map 
+{
+    height:auto;
+    width: 100%;
+    margin-top: 3em;
+    line-height: 30em;
+    border: none;
+}
+  
+ 
