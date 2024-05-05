@@ -15,7 +15,7 @@ function createButtons() {
         // Set attributes or styles for the div if needed
         button.textContent = `${txts[i]} near me`;
         button.classList.add("created-div"); // Add a CSS class if needed
-        
+
         // Append the div to the container
         container.appendChild(button);
     }
