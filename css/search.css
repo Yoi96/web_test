@@ -11,7 +11,7 @@
 #zipCodeInput,.search_box 
 {
       border: 1px solid #ccc;
-      width: 600px;
+      width: 500px;
       border-right: none;
       line-height: 2em;
 }
