@@ -117,12 +117,12 @@ grey_font
       position: fixed;
       left: 0;
       bottom: 0;
+      padding-top: 5em;
       width: 100%;
       line-height: 3em;
       text-align: center;
       font-family: 'Helvetica';
       src:url("fonts/Helvetica-Bold.ttf");
-      margin-top:10em;
       text-transform: capitalize; 
       font-size: 0.5em;
       margin: 0px auto;
