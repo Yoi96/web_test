@@ -14,8 +14,8 @@ function createButtons() {
         button.className = "search_button"
         // Set attributes or styles for the div if needed
         button.textContent = `${txts[i]} near me`;
-        button.classList.add("created-div"); // Add a CSS class if needed
-        button.href = "css/search.css";
+        button.classList.add("created-div","css/search.css"); // Add a CSS class if needed
+ 
 
         // Append the div to the container
         container.appendChild(button);
