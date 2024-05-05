@@ -8,7 +8,7 @@
 
 }
     
-.search_box 
+.zipCodeInput
 {
       border: 1px solid #ccc;
       width: 400px;
@@ -16,7 +16,7 @@
       line-height: 2em;
 }
     
-.search_button 
+#search
 {
       border: none;
       background: #000066;
@@ -27,12 +27,12 @@
       text-align: center;
 }
 
-.search_button:hover
+#search:hover
 {
       background:#E41B23;
 }
 
-#mao
+#map
 {
       width: 100%;
       height: auto;
