@@ -136,3 +136,10 @@ grey_font
       height: auto;
       width:5em;
 }
+
+.search_map
+{
+      width: 100%;
+      height: 50em;
+      line-height: 50em;
+}
