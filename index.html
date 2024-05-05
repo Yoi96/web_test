@@ -1,53 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nearby Hospitals</title>
-<style>
-  #map {
-    height: 400px;
-    width: 100%;
-  }
-</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="images/logo.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+	<script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+    ({ key: "AIzaSyBhnZQKdO2Vs0DT3aLvj6Q4G_VIeBMbiuA", v: "weekly" });</script>
+ 
+
+	<title>Lagcc Spring 2024 Hackathon</title>
 </head>
 <body>
+	<div id="wrap"> <!---Wrap Start--->
+		<div id="wrap_body">
+		<div id="header" class="header"><!---header Start--->
+			<!---logo Start--->
+			<div id="logo" class="logo">&nbsp;</div>
+			<!---logo end--->
 
-<h1>Nearby Hospitals</h1>
+			<div class="blank_top">&nbsp;</div>
 
-<div id="map"></div>
 
-<script>
-  function initMap() {
-    var geocoder = new google.maps.Geocoder();
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 40.7128, lng: -74.0060}, // 默认位置为纽约市
-      zoom: 10
-    });
+			<!---google_translate Start--->
 
-    var zipCode = "YOUR_ZIP_CODE"; // 替换为要搜索的 ZIP Code
+			<div id="google_translate" class="google_translate">
 
-    // 地理编码，将 ZIP Code 转换为经纬度
-    geocoder.geocode({'address': zipCode}, function(results, status) {
-      if (status === 'OK') {
-        map.setCenter(results[0].geometry.location);
+		        <div id="google_translate_element"></div>
 
-        // 在地图上显示医院标记
-        var hospitalMarker = new google.maps.Marker({
-          position: results[0].geometry.location,
-          map: map,
-          title: 'Hospital'
-        });
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
-</script>
+		        <script type="text/javascript">
+		        function googleTranslateElementInit() {
+		          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		        }
+		        </script>
 
-<!-- 引入 Google Maps JavaScript API -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-<!-- 替换 YOUR_API_KEY 为你的 Google Maps API 密钥 -->
+		        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		    </div><!---google_translate end--->
+
+		</div><!---header end--->
+
+		<!---main_body Start--->
+		<div id="main_body" class="main_body">
+			<div id="finder" class="finder">
+				<find_sevices>FIND SERVICES</find_sevices>
+				<br>
+				<grey_font>Helping asylum seekers in the areas of healthcare, education and food security.</grey_font>
+			</div>
+
+
+			<div class="search_container">
+			  <input type="text" id="zipCodeInput" placeholder="Enter Zip Code" class="search_box">
+  			
+  			  <script type="module" src="./functions/buttons.js"></script>
+  
+  			  <script type="module" src="./functions/map.js"></script>
+  				
+  			  <button id = "search" class="search_button"> search</button>
+
+
+			  <div id="container"></div>
+
+
+			  <div id="map"></div>
+ 
+			</div>
+
+			 
+
+		</div>
+
+		<!---main_body end--->
+
+	
+
+
+
+
+
+		<div id="footer">Copyright &copy; 2024  LAGCC Spring 2024 Hackathon: Xiaoyi Liu, Hongzhong Hu, and JC Burga  </div>
+
+
+
+
+	</div>
+	</div><!---wrap end--->
+
 
 </body>
 </html>
