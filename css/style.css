@@ -100,8 +100,12 @@ find_sevices
 {
       font-family: "MARBOLD";
       src:url("fonts/MARBOLD.TTF");
-      font-size:5.2em;
-      color:#000066;       
+      font-size:5em;
+      background-image: linear-gradient(to bottom,#E41B23, #000066);
+      color: #ffffff;  
+      background-clip: text;
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent;       
 }
 
 grey_font

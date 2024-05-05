@@ -11,7 +11,7 @@
 .search_box 
 {
       border: 1px solid #ccc;
-      width:200px;
+      width: 600px;
       border-right: none;
       line-height: 2em;
 }
@@ -31,12 +31,3 @@
 {
       background:#E41B23;
 }
-
-
-#map 
-{
-    height: 10em;
-    width: 100%;
-}
-  
- 
