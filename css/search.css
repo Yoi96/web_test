@@ -1,24 +1,22 @@
 /**Search CSS***/
-#search_container 
+.search_container 
 {
       display: flex;
       justify-content: center;
       margin-top:4em;
       line-height: 2em;
-      height: auto;
-      width: 100%;
+
 }
     
-#zipCodeInput
+#zipCodeInput,.search_box 
 {
       border: 1px solid #ccc;
-      width: 400px;
+      width: 600px;
       border-right: none;
       line-height: 2em;
-      height: 2em;
 }
     
-#search
+#search,.search_button 
 {
       border: none;
       background: #000066;
@@ -27,18 +25,9 @@
       cursor: pointer;
       line-height: 2em;
       text-align: center;
-      height: 2em;
 }
 
-#search:hover
+.search_button:hover
 {
       background:#E41B23;
-}
-
-#map
-{
-      width: 100%;
-      height: auto;
-      line-height: 40em;
-
 }
